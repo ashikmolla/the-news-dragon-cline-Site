@@ -10,6 +10,8 @@ import News from "../Pages/News/News/News";
 import LoginLayout from "../Layouts/LoginLayout";
 import Login from "../Pages/Home/Login/Login/Login";
 import Register from "../Pages/Home/Login/Register/Register";
+import PrivetRoutes from "./PrivetRoutes";
+import RegTerms from "../Pages/Shared/RegTerms/RegTerms";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,9 @@ const router = createBrowserRouter([
             }, {
                 path: 'register',
                 element: <Register />
+            }, {
+                path: 'regTrems',
+                element: <RegTerms />
             }
         ]
     },
@@ -41,7 +46,7 @@ const router = createBrowserRouter([
         ]
     }, {
         path: 'news',
-        element: <NewsLayout />,
+        element: <PrivetRoutes><NewsLayout /></PrivetRoutes>,
         children: [
             {
                 path: ':id',
