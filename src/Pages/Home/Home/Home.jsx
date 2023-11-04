@@ -5,7 +5,7 @@ import Footer from '../../Shared/Footer/Footer';
 const Home = () => {
     return (
         <div>
-            
+            <h1>Hello Home</h1>
             
         </div>
     );

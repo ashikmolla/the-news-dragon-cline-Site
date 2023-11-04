@@ -2,11 +2,11 @@ import React from 'react';
 import logo from '../../../assets/logo.png';
 import moment from 'moment';
 import Marquee from "react-fast-marquee";
-import { Button, Container } from 'react-bootstrap';
+import { Button, Container} from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <Container>
+        <Container className='mb-4'>
             <div className="text-center">
                 <img src={logo} alt="" />
                 <p className='mt-2'>
@@ -21,6 +21,7 @@ const Header = () => {
                     অভিনেত্রী আগেই জানিয়েছিলেন 'গুনিন' ছবির শ্যুটিং সেটে গোপনে রাজকে বিয়ে করেছেন তিনি। তবে চলতি মাসের শুরুতে তাঁর মা হতে চলবার ...
                 </Marquee>
             </div>
+            
 
         </Container>
     );
