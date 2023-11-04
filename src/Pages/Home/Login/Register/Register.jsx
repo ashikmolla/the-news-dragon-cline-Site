@@ -5,8 +5,8 @@ import { AuthContext } from '../../../../provider/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
 const Register = () => {
     const [error, setError] = useState('')
-    const { createUser, setUser ,signInWithGoogle} = useContext(AuthContext);
-    const [accepte, setAccepet ]=useState(false)
+    const { createUser, signInWithGoogle } = useContext(AuthContext);
+    const [accepte, setAccepet] = useState(false)
 
     const handleRegisterSubmit = (event) => {
         event.preventDefault();
@@ -42,8 +42,8 @@ const Register = () => {
     }
 
 
-// condition for accepted box 
-    const handelChackBox=(event)=>{
+    // condition for accepted box 
+    const handelChackBox = (event) => {
         const look = event.target.checked;
         // console.log(look)
         setAccepet(look)
@@ -53,68 +53,70 @@ const Register = () => {
 
     return (
 
-        <Container className='align-items-center' >
+        <>
+            <Container className='align-items-center' >
 
-            <Form onSubmit={handleRegisterSubmit} className='border p-4 w-50 mx-auto my-auto'>
-                <Form.Group className='text-center mb-5'>
-                    <h1 className=''>Register your account</h1>
-                </Form.Group>
-
-
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Your Name</Form.Label>
-                    <Form.Control name='name' type="text" placeholder="Enter Name" required />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Photo Url</Form.Label>
-                    <Form.Control name='photourl' type="text" placeholder="Enter Photo Rrl" required />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control name='email' type="email" placeholder="Enter email" required />
-
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control name="password" type="password" placeholder="Password" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check 
-                    onClick={handelChackBox}
-                     name='accept' type="checkbox" 
-                     label={<> Accept Our  <Link style={{textDecoration:'none', color:"#ff5200"}} to="/regTrems">Condition</Link> 
-                         </>} />
-                </Form.Group>
+                <Form onSubmit={handleRegisterSubmit} className='border p-4 w-50 mx-auto my-auto'>
+                    <Form.Group className='text-center mb-5'>
+                        <h1 className=''>Register your account</h1>
+                    </Form.Group>
 
 
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Your Name</Form.Label>
+                        <Form.Control name='name' type="text" placeholder="Enter Name" required />
+                    </Form.Group>
 
-                <Form.Group className="text-center mt-4 " controlId="formBasicCheckbox">
-                    <span>{error}</span>
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Photo Url</Form.Label>
+                        <Form.Control name='photourl' type="text" placeholder="Enter Photo Rrl" required />
+                    </Form.Group>
 
-                <Form.Group className="text-center" controlId="formBasicCheckbox">
-                    <Button className='px-5' disabled={!accepte} variant="primary"  type="submit">
-                        Register
-                    </Button>
-                </Form.Group>
-                <Form.Group className="text-center mt-4 " controlId="formBasicCheckbox">
-                    <p>Allrady have an Account  ?<Link to="/login"> Login</Link></p>
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control name='email' type="email" placeholder="Enter email" required />
 
+                    </Form.Group>
 
-                <Form.Group className="text-center " controlId="formBasicCheckbox">
-                    <Button onClick={handelSignInWithGoogle} style={{ backgroundColor:"#34A853", border:'none'}} >
-                        <FaGoogle style={{ fontSize: '2rem', color: '##34A853' }} />
-                    </Button>
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control name="password" type="password" placeholder="Password" required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check
+                            onClick={handelChackBox}
+                            name='accept' type="checkbox"
+                            label={<> Accept Our  <Link style={{ textDecoration: 'none', color: "#ff5200" }} to="/regTrems">Condition</Link>
+                            </>} />
+                    </Form.Group>
 
 
 
-            </Form>
-        </Container>
+                    <Form.Group className="text-center mt-4 " controlId="formBasicCheckbox">
+                        <span>{error}</span>
+                    </Form.Group>
+
+                    <Form.Group className="text-center" controlId="formBasicCheckbox">
+                        <Button className='px-5' disabled={!accepte} variant="primary" type="submit">
+                            Register
+                        </Button>
+                    </Form.Group>
+                    <Form.Group className="text-center mt-4 " controlId="formBasicCheckbox">
+                        <p>Allrady have an Account  ?<Link to="/login"> Login</Link></p>
+                    </Form.Group>
+
+
+                    <Form.Group className="text-center " controlId="formBasicCheckbox">
+                        <Button onClick={handelSignInWithGoogle} style={{ backgroundColor: "#34A853", border: 'none' }} >
+                            <FaGoogle style={{ fontSize: '2rem', color: '##34A853' }} />
+                        </Button>
+                    </Form.Group>
+
+
+
+                </Form>
+            </Container>
+        </>
     );
 };
 
