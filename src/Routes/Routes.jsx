@@ -12,6 +12,7 @@ import Login from "../Pages/Home/Login/Login/Login";
 import Register from "../Pages/Home/Login/Register/Register";
 import PrivetRoutes from "./PrivetRoutes";
 import RegTerms from "../Pages/Shared/RegTerms/RegTerms";
+import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,9 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://the-news-dragon-server-site-ashikmolla.vercel.app/news/${params.id}`)
             }
         ]
+    },{
+        path:'*',
+        element:<ErrorPage></ErrorPage>
     }
 ]);
 export default router;

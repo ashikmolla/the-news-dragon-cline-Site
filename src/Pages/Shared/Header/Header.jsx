@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <Container className='mb-4'>
             <div className="text-center">
-                <img className='w-100' src={logo} alt="" />
+                <img className='w-50' src={logo} alt="" />
                 <p className='mt-2'>
                     <spen>Journalism Without Fear or Favour</spen>
                 </p>
