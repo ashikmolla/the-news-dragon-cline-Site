@@ -1,14 +1,18 @@
 .bgpng {
     position: relative;
 
+
 }
 
 .bgpngDetils {
     position: absolute;
     margin-top: -450px;
-    width: 60%;
-    text-align: center;
-    margin-left: 65px;
+    width: 90%;
+    /* border: 1px solid red; */
+    /* padding: 20px; */
+    margin-left: 15px;
+
+
 
 }
 
@@ -18,8 +22,11 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 45px;
-    text-align: center;
     color: #FFFFFF;
+    /* border: 1px solid red; */
+    width: 220px;
+    margin: auto;
+
 
 }
 
@@ -29,10 +36,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    text-align: center;
     color: #FFFFFF;
-    margin-left: 10px;
-    margin-top: 30px;
+    width: 220px;
+    margin: auto;
+
 
 
 }
@@ -42,11 +49,10 @@
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
-    text-align: center;
     color: #FFFFFF;
-    width: 150px;
-    height: 64px;
-    margin-top: 40px;
+    width: 220px;
+    margin: auto;
+
 
 
 }

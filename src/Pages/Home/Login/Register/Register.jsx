@@ -15,11 +15,11 @@ const Register = () => {
         const password = event.target.password.value;
         const name = event.target.name.value;
         const photoUrl = event.target.name.value;
-        console.log(email, password, name, photoUrl)
+        // console.log(email, password, name, photoUrl)
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 event.target.reset();
             })
             .catch((error) => {
@@ -54,9 +54,9 @@ const Register = () => {
     return (
 
         <>
-            <Container className='align-items-center' >
+            <Container className='align-items-center ' >
 
-                <Form onSubmit={handleRegisterSubmit} className='border p-4 w-50 mx-auto my-auto'>
+                <Form onSubmit={handleRegisterSubmit} className='border p-4 mx-auto w-50'>
                     <Form.Group className='text-center mb-5'>
                         <h1 className=''>Register your account</h1>
                     </Form.Group>

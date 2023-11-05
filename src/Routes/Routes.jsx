@@ -1,4 +1,4 @@
-import { Children } from "react";
+
 import {
     Navigate,
     createBrowserRouter,
@@ -40,8 +40,9 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ':id',
-                element: <Category />,
-                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+                element: <Category></Category>,
+                loader: ({ params }) => fetch(`https://the-news-dragon-server-site-ashikmolla.vercel.app/categories/${params.id}`),
+                // loader: ({ params }) => fetch(`https://the-news-dragon-server-site-jdzkds8vb-ashikmolla.vercel.app/categories/${params.id}`),
             }
         ]
     }, {
@@ -50,8 +51,9 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ':id',
-                element: <News />,
-                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+                element: <News></News>,
+                // loader: ({ params }) => fetch(`https://the-news-dragon-server-site-jdzkds8vb-ashikmolla.vercel.app/news/${params.id}`)
+                loader: ({ params }) => fetch(`https://the-news-dragon-server-site-ashikmolla.vercel.app/news/${params.id}`)
             }
         ]
     }

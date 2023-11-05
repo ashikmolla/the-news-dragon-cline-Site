@@ -4,12 +4,12 @@ import ActivLink from '../../../ActivLink/ActivLink';
 
 const LeftNav = () => {
     const [categories, setCategories]=useState([]);
-    useEffect(()=>{
-        fetch('http://localhost:5000/categories')
-        .then(res=>res.json())
-        .then(data=>setCategories(data))
-        .catch(error=> console.log(error))
-    },[])
+    useEffect(() => {
+        fetch('https://the-news-dragon-server-site-ashikmolla.vercel.app/categories')
+            .then(res => res.json())
+            .then(data => setCategories(data))
+            .catch(error => console.error(error))
+    }, [])
     // console.log(categories)
     return (
         <div>

@@ -15,7 +15,7 @@ const NavigationBar = () => {
             .catch((error) => { console.error(error) });
     }
     return (
-        <Container>
+        <Container className='mb-4'>
             <Navbar collapseOnSelect expand="lg"  variant="light">
                 <Container>
 
@@ -46,7 +46,7 @@ const NavigationBar = () => {
                                 :
                                 <Link to="/login"> <Button variant="dark">Login</Button></Link>
                             }
-                            <Link to="register"><Button variant="dark">Register</Button></Link>
+                            <Link to="/register"><Button variant="dark">Register</Button></Link>
 
                         </Nav>
                     </Navbar.Collapse>
