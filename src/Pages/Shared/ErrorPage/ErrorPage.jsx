@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const ErrorPage = () => {
 
@@ -10,6 +11,8 @@ const ErrorPage = () => {
     const handelBack = () => {
         navigate(from, { replace: true })
     }
+
+    useTitle("Erroer Page")
     return (
         <div className="w-100 text-center pb-5 mt-5" style={{ paddingTop: "100px" }}>
 

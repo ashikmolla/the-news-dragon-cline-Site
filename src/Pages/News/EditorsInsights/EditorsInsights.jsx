@@ -13,7 +13,7 @@ const EditorsInsights = () => {
           <Card>
             <Card.Img variant="top" src={first}/>
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Ashik</Card.Title>
               <Card.Text>
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
@@ -26,7 +26,7 @@ const EditorsInsights = () => {
           <Card>
             <Card.Img variant="top" src={second}/>
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Molla</Card.Title>
               <Card.Text>
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
@@ -39,7 +39,7 @@ const EditorsInsights = () => {
           <Card>
             <Card.Img variant="top" src={tharid}/>
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Atik Vai</Card.Title>
               <Card.Text>
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit

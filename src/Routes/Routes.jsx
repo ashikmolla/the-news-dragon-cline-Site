@@ -4,7 +4,6 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 import Main from "../Layouts/Main";
-import Category from "../Pages/Home/Category/Category";
 import NewsLayout from "../Layouts/NewsLayout";
 import News from "../Pages/News/News/News";
 import LoginLayout from "../Layouts/LoginLayout";
@@ -13,6 +12,7 @@ import Register from "../Pages/Home/Login/Register/Register";
 import PrivetRoutes from "./PrivetRoutes";
 import RegTerms from "../Pages/Shared/RegTerms/RegTerms";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import Home from "../Pages/Home/Home/Home";
 
 const router = createBrowserRouter([
     {
@@ -41,7 +41,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ':id',
-                element: <Category></Category>,
+                // element: <Category></Category>,
+                element: <Home />,
                 loader: ({ params }) => fetch(`https://the-news-dragon-server-site-ashikmolla.vercel.app/categories/${params.id}`),
                 // loader: ({ params }) => fetch(`https://the-news-dragon-server-site-jdzkds8vb-ashikmolla.vercel.app/categories/${params.id}`),
             }
@@ -57,9 +58,9 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://the-news-dragon-server-site-ashikmolla.vercel.app/news/${params.id}`)
             }
         ]
-    },{
-        path:'*',
-        element:<ErrorPage></ErrorPage>
+    }, {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
 ]);
 export default router;

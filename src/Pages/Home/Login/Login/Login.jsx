@@ -3,12 +3,15 @@ import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../provider/AuthProvider';
+import useTitle from '../../../../Hooks/useTitle';
 
 const Login = () => {
     const [error, setError] = useState(null)
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+
+    useTitle('Login')
 
 
     const from = location.state?.from?.pathname || '/';

@@ -3,13 +3,16 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../provider/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
+import useTitle from '../../../../Hooks/useTitle';
 const Register = () => {
     const [error, setError] = useState('')
     const { createUser, signInWithGoogle } = useContext(AuthContext);
     const [accepte, setAccepet] = useState(false)
-
+    useTitle("Register")
     const handleRegisterSubmit = (event) => {
         event.preventDefault();
+
+
 
         const email = event.target.email.value;
         const password = event.target.password.value;
@@ -53,7 +56,7 @@ const Register = () => {
 
     return (
 
-        <>
+        <div>
             <Container className='align-items-center ' >
 
                 <Form onSubmit={handleRegisterSubmit} className='border p-4 mx-auto w-50'>
@@ -116,7 +119,7 @@ const Register = () => {
 
                 </Form>
             </Container>
-        </>
+        </div>
     );
 };
 
